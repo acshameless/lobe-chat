@@ -165,6 +165,20 @@ const getLlmOptionsFromPayload = (provider: string, payload: JWTPayload) => {
 
       return { apiKey };
     }
+    case ModelProvider.Stepfun: {
+      const { STEPFUN_API_KEY } = getLLMConfig();
+
+      const apiKey = apiKeyManager.pick(payload?.apiKey || STEPFUN_API_KEY);
+
+      return { apiKey };
+    }
+    case ModelProvider.Baichuan: {
+      const { BAICHUAN_API_KEY } = getLLMConfig();
+
+      const apiKey = apiKeyManager.pick(payload?.apiKey || BAICHUAN_API_KEY);
+
+      return { apiKey };
+    }
   }
 };
 

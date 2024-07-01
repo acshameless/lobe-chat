@@ -2,6 +2,7 @@ import { ChatModelCard, ModelProviderCard } from '@/types/llm';
 
 import AnthropicProvider from './anthropic';
 import AzureProvider from './azure';
+import BaichuanProvider from './baichuan';
 import BedrockProvider from './bedrock';
 import DeepSeekProvider from './deepseek';
 import GoogleProvider from './google';
@@ -14,6 +15,7 @@ import OpenAIProvider from './openai';
 import OpenRouterProvider from './openrouter';
 import PerplexityProvider from './perplexity';
 import QwenProvider from './qwen';
+import StepfunProvider from './stepfun';
 import TogetherAIProvider from './togetherai';
 import ZeroOneProvider from './zeroone';
 import ZhiPuProvider from './zhipu';
@@ -35,6 +37,8 @@ export const LOBE_DEFAULT_MODEL_LIST: ChatModelCard[] = [
   PerplexityProvider.chatModels,
   AnthropicProvider.chatModels,
   ZeroOneProvider.chatModels,
+  StepfunProvider.chatModels,
+  BaichuanProvider.chatModels,
 ].flat();
 
 export const DEFAULT_MODEL_PROVIDER_LIST = [
@@ -55,6 +59,8 @@ export const DEFAULT_MODEL_PROVIDER_LIST = [
   MoonshotProvider,
   ZeroOneProvider,
   ZhiPuProvider,
+  StepfunProvider,
+  BaichuanProvider,
 ];
 
 export const filterEnabledModels = (provider: ModelProviderCard) => {
@@ -63,6 +69,7 @@ export const filterEnabledModels = (provider: ModelProviderCard) => {
 
 export { default as AnthropicProviderCard } from './anthropic';
 export { default as AzureProviderCard } from './azure';
+export { default as BaichuanProviderCard } from './baichuan';
 export { default as BedrockProviderCard } from './bedrock';
 export { default as DeepSeekProviderCard } from './deepseek';
 export { default as GoogleProviderCard } from './google';
@@ -75,6 +82,7 @@ export { default as OpenAIProviderCard } from './openai';
 export { default as OpenRouterProviderCard } from './openrouter';
 export { default as PerplexityProviderCard } from './perplexity';
 export { default as QwenProviderCard } from './qwen';
+export { default as StepfunProviderCard } from './stepfun';
 export { default as TogetherAIProviderCard } from './togetherai';
 export { default as ZeroOneProviderCard } from './zeroone';
 export { default as ZhiPuProviderCard } from './zhipu';
