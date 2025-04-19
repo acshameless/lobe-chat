@@ -1,6 +1,31 @@
 import { AIChatModelCard } from '@/types/aiModel';
 
 const googleChatModels: AIChatModelCard[] = [
+    {
+    abilities: {
+      functionCall: true,
+      reasoning: true,
+      search: true,
+      vision: true,
+    },
+    contextWindowTokens: 1_048_576 + 65_536,
+    description:
+      'Gemini 2.5 Flash Preview 是 Google 性价比最高的模型，提供全面的功能。',
+    displayName: 'Gemini 2.5 Flash Preview 04-17',
+    enabled: true,
+    id: 'gemini-2.5-flash-preview-04-17',
+    maxOutput: 65_536,
+    pricing: {
+      input: 0.15,
+      output: 3.5, // Thinking
+    },
+    releasedAt: '2025-04-17',
+    settings: {
+      searchImpl: 'params',
+      searchProvider: 'google',
+    },
+    type: 'chat',
+  },
   {
     abilities: {
       functionCall: true,
@@ -16,7 +41,6 @@ const googleChatModels: AIChatModelCard[] = [
     id: 'gemini-2.5-pro-exp-03-25',
     maxOutput: 65_536,
     pricing: {
-      cachedInput: 0,
       input: 0,
       output: 0,
     },
@@ -174,7 +198,6 @@ const googleChatModels: AIChatModelCard[] = [
   },
   {
     abilities: {
-      imageOutput: true,
       vision: true,
     },
     contextWindowTokens: 1_048_576 + 8192,
@@ -295,6 +318,42 @@ const googleChatModels: AIChatModelCard[] = [
       output: 0.15,
     },
     releasedAt: '2024-10-03',
+    type: 'chat',
+  },
+  {
+    contextWindowTokens: 32_768 + 8192,
+    displayName: 'Gemma 3 1B',
+    id: 'gemma-3-1b-it',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0,
+      input: 0,
+      output: 0,
+    },
+    type: 'chat',
+  },
+  {
+    contextWindowTokens: 32_768 + 8192,
+    displayName: 'Gemma 3 4B',
+    id: 'gemma-3-4b-it',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0,
+      input: 0,
+      output: 0,
+    },
+    type: 'chat',
+  },
+  {
+    contextWindowTokens: 32_768 + 8192,
+    displayName: 'Gemma 3 12B',
+    id: 'gemma-3-12b-it',
+    maxOutput: 8192,
+    pricing: {
+      cachedInput: 0,
+      input: 0,
+      output: 0,
+    },
     type: 'chat',
   },
 ];
